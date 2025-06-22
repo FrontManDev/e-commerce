@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    box-sizing: border-box;
+}
+.home-hero{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5%;
+}
+.home-hero .text-hero{
+    width: 50%;
+    font-size: 2.5rem;
+}
+.home-hero .text-hero button{
+    width: 250px;
+    text-align: center;
+    border: none;
+    padding: 15px;
+    font-size: 1.3rem;
+    background-color: black;
+    color: white;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.home-hero img{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+.service-section{
+    height: 100vh;
+    width: 100%;
+    padding: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.service-section .service-items{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.service-section .service-items .Service-item{
+    padding: 10px;
+    border: 1px solid black;
+    margin: 10px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.service-section .service-items .Service-item .service-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+.service-section .service-items .Service-item .service-heading .icon{
+    font-size: 3rem;
+}
+.service-section .service-items .Service-item .text-heading{
+    text-align: center;
+}
+.products-section {
+    height: auto;
+    padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.products-section .mobile .title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.products-section .mobile .mobile-items {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* لإضافة responsive behavior */
+}
+
+.products-section .mobile .mobile-items .mobile-item {
+    width: 250px;
+    height: 350px;
+    position: relative; /* مهم لتحديد موقع الأزرار بشكل صحيح */
+}
+
+.products-section .mobile .mobile-items .mobile-item article {
+    width: 100%;
+    height: 80%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.products-section .mobile .mobile-items .mobile-item article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* إضافة تأثير حركي للصورة */
+}
+
+.products-section .mobile .mobile-items .mobile-item article:hover img {
+    transform: scale(1.05); /* تكبير الصورة عند hover */
+}
+
+.products-section .mobile .mobile-items .mobile-item article .mobile-buttons {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    background-color: #00000050;
+    top: 100%; 
+    left: 0;
+    transition: 0.5s ease;
+}
+
+.products-section .mobile .mobile-items .mobile-item article .mobile-buttons button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.products-section .mobile .mobile-items .mobile-item article .mobile-buttons button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+.products-section .mobile .mobile-items .mobile-item article:hover .mobile-buttons {
+    top: 75%; 
+}
+
+.products-section .mobile .mobile-items .mobile-item .mobile-text {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.products-section .mobile .mobile-items .mobile-item .mobile-text h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.products-section .mobile .mobile-items .mobile-item .mobile-text span {
+    font-weight: bold;
+    color: #4a6cf7;
+    font-size: 1.1rem;
+}
