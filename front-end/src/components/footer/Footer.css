@@ -55,10 +55,6 @@
     transition: color 0.3s;
 }
 
-.footer-column ul li a:hover {
-    color: #ffffff;
-}
-
 .social-icons {
     display: flex;
     gap: 1rem;
