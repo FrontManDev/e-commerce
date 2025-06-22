@@ -2,10 +2,10 @@ import './Home.css';
 import { NavLink } from 'react-router-dom';
 import { IoEyeSharp } from "react-icons/io5";
 import { FaCartPlus } from "react-icons/fa";
-
 import { CiDeliveryTruck, CiCreditCard1, CiUndo, CiHeadphones, CiGift, CiBoxes } from "react-icons/ci";
+
 export default function Home() {
-    const Mobile = Array(10).fill('-');
+    const products = Array(4).fill('-');
     return (
         <div>
             <div className="home-hero">
@@ -15,7 +15,112 @@ export default function Home() {
                 </div>
                 <img src="./background-img/smartwatch-min.jpg" alt="" />
             </div>
+            <div className="products-section">
+                <div className="product-category">
+                    <div className="title">
+                        <h1>Mobile Products</h1>
+                        <NavLink>Go The Shop</NavLink>
+                    </div>
+                    <div className="product-items">
+                        {
+                            products.map((index) => (
+                                <div className="product-item">
+                                    <article>
+                                        <img src="./background-img/iphone.jpg" alt="" />
+                                        <div className="product-buttons">
+                                            <button><FaCartPlus /></button>
+                                            <button><IoEyeSharp /></button>
+                                        </div>
+                                    </article>
+                                    <div className="product-text">
+                                        <h3>Iphone 10</h3>
+                                        <h3>980$</h3>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+                <div className="product-category">
+                    <div className="title">
+                        <h1>Smart-Watch Products</h1>
+                        <NavLink>Go The Shop</NavLink>
+                    </div>
+                    <div className="product-items">
+                        {
+                            products.map((index) => (
+                                <div className="product-item">
+                                    <article>
+                                        <img src="./background-img/smartwatch-min.jpg" alt="" />
+                                        <div className="product-buttons">
+                                            <button><FaCartPlus /></button>
+                                            <button><IoEyeSharp /></button>
+                                        </div>
+                                    </article>
+                                    <div className="product-text">
+                                        <h3>Iphone 10</h3>
+                                        <h3>980$</h3>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+                <div className="product-category">
+                    <div className="title">
+                        <h1>Tablet Products</h1>
+                        <NavLink>Go The Shop</NavLink>
+                    </div>
+                    <div className="product-items">
+                        {
+                            products.map((index) => (
+                                <div className="product-item">
+                                    <article>
+                                        <img src="./background-img/ipad.jpg" alt="" />
+                                        <div className="product-buttons">
+                                            <button><FaCartPlus /></button>
+                                            <button><IoEyeSharp /></button>
+                                        </div>
+                                    </article>
+                                    <div className="product-text">
+                                        <h3>Iphone 10</h3>
+                                        <h3>980$</h3>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+                <div className="product-category">
+                    <div className="title">
+                        <h1>Audio Products</h1>
+                        <NavLink>Go The Shop</NavLink>
+                    </div>
+                    <div className="product-items">
+                        {
+                            products.map((index) => (
+                                <div className="product-item">
+                                    <article>
+                                        <img src="./background-img/ear-pod.jpg" alt="" />
+                                        <div className="product-buttons">
+                                            <button><FaCartPlus /></button>
+                                            <button><IoEyeSharp /></button>
+                                        </div>
+                                    </article>
+                                    <div className="product-text">
+                                        <h3>Iphone 10</h3>
+                                        <h3>980$</h3>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+            </div>
             <div className="service-section">
+                <div className="title">
+                    <h1>Our Service</h1>
+                </div>
                 <div className="service-items">
                     <div className="Service-item">
                         <div className="service-heading">
@@ -98,31 +203,11 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="products-section">
-                <div className="mobile">
-                    <div className="title">
-                        <h2>Mobile Products</h2>
-                        <NavLink>Go The Shop</NavLink>
-                    </div>
-                    <div className="mobile-items">
-                        {
-                            Mobile.map((index) => (
-                                <div className="mobile-item">
-                                    <article>
-                                        <img src="./background-img/iphone.jpg" alt="" />
-                                        <div className="mobile-buttons">
-                                            <button><FaCartPlus /></button>
-                                            <button><IoEyeSharp /></button>
-                                        </div>
-                                    </article>
-                                    <div className="mobile-text">
-                                        <h3>Iphone 10</h3>
-                                        <h3>980$</h3>
-                                    </div>
-                                </div>
-                            ))
-                        }
-                    </div>
+            <div className="promo-section">
+                <div className="promo-banner">
+                    <h2>30% OFF ALL PRODUCTS THIS WEEK ONLY!</h2>
+                    <p>Use code: TECH30 at checkout</p>
+                    <button>SHOP NOW</button>
                 </div>
             </div>
         </div>

@@ -4,7 +4,8 @@
     font-family: "Lato", sans-serif;
     box-sizing: border-box;
 }
-.home-hero{
+
+.home-hero {
     height: 100vh;
     width: 100%;
     display: flex;
@@ -12,11 +13,13 @@
     align-items: center;
     padding: 2.5%;
 }
-.home-hero .text-hero{
+
+.home-hero .text-hero {
     width: 50%;
     font-size: 2.5rem;
 }
-.home-hero .text-hero button{
+
+.home-hero .text-hero button {
     width: 250px;
     text-align: center;
     border: none;
@@ -27,24 +30,33 @@
     margin-top: 50px;
     cursor: pointer;
 }
-.home-hero img{
+
+.home-hero img {
     width: 50%;
     height: 100%;
     object-fit: cover;
 }
-.service-section{
+
+.service-section {
     height: 100vh;
     width: 100%;
     padding: 2.5%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
-.service-section .service-items{
+
+.service-section .title{
+    margin-bottom: 50px;
+}
+
+.service-section .service-items {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
 }
-.service-section .service-items .Service-item{
+
+.service-section .service-items .Service-item {
     padding: 10px;
     border: 1px solid black;
     margin: 10px;
@@ -55,45 +67,69 @@
     flex-direction: column;
     cursor: pointer;
 }
-.service-section .service-items .Service-item .service-heading{
+
+.service-section .service-items .Service-item .service-heading {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     padding: 10px;
 }
-.service-section .service-items .Service-item .service-heading .icon{
+
+.service-section .service-items .Service-item .service-heading .icon {
     font-size: 3rem;
 }
-.service-section .service-items .Service-item .text-heading{
+
+.service-section .service-items .Service-item .text-heading {
     text-align: center;
 }
+
 .products-section {
     height: auto;
     padding: 2.5%;
-    display: flex;
-    flex-direction: column;
 }
 
-.products-section .mobile .title {
+.products-section .product-category {
+    padding: 0% 8%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     margin-bottom: 50px;
 }
 
-.products-section .mobile .mobile-items {
+.products-section .product-category .title {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap; /* لإضافة responsive behavior */
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
-.products-section .mobile .mobile-items .mobile-item {
-    width: 250px;
-    height: 350px;
-    position: relative; /* مهم لتحديد موقع الأزرار بشكل صحيح */
+.products-section .product-category .title h1 {
+    font-size: 2.5rem;
+    font-weight: 100;
 }
 
-.products-section .mobile .mobile-items .mobile-item article {
+.products-section .product-category .title a {
+    text-decoration: none;
+    color: black;
+}
+
+.products-section .product-category .title a:hover {
+    text-decoration: underline;
+}
+
+.products-section .product-category .product-items {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    overflow-x: hidden;
+}
+
+.products-section .product-category .product-items .product-item {
+    width: 230px;
+    height: 450px;
+    position: relative;
+}
+
+.products-section .product-category .product-items .product-item article {
     width: 100%;
     height: 80%;
     position: relative;
@@ -101,18 +137,18 @@
     cursor: pointer;
 }
 
-.products-section .mobile .mobile-items .mobile-item article img {
+.products-section .product-category .product-items .product-item article img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease; /* إضافة تأثير حركي للصورة */
+    transition: transform 0.3s ease;
 }
 
-.products-section .mobile .mobile-items .mobile-item article:hover img {
-    transform: scale(1.05); /* تكبير الصورة عند hover */
+.products-section .product-category .product-items .product-item article:hover img {
+    transform: scale(1.05);
 }
 
-.products-section .mobile .mobile-items .mobile-item article .mobile-buttons {
+.products-section .product-category .product-items .product-item article .product-buttons {
     width: 100%;
     padding: 10px;
     display: flex;
@@ -121,12 +157,12 @@
     gap: 20px;
     position: absolute;
     background-color: #00000050;
-    top: 100%; 
+    top: 100%;
     left: 0;
     transition: 0.5s ease;
 }
 
-.products-section .mobile .mobile-items .mobile-item article .mobile-buttons button {
+.products-section .product-category .product-items .product-item article .product-buttons button {
     width: 50px;
     height: 50px;
     font-size: 1.4rem;
@@ -140,30 +176,135 @@
     cursor: pointer;
 }
 
-.products-section .mobile .mobile-items .mobile-item article .mobile-buttons button:hover {
+.products-section .product-category .product-items .product-item article .product-buttons button:hover {
     background-color: #f0f0f0;
     transform: scale(1.1);
 }
 
-.products-section .mobile .mobile-items .mobile-item article:hover .mobile-buttons {
-    top: 75%; 
+.products-section .product-category .product-items .product-item article:hover .product-buttons {
+    top: 81%;
 }
 
-.products-section .mobile .mobile-items .mobile-item .mobile-text {
+.products-section .product-category .product-items .product-item .product-text {
     padding: 15px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #005858;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
-.products-section .mobile .mobile-items .mobile-item .mobile-text h3 {
-    margin: 0;
-    font-size: 1.1rem;
-    color: #333;
+.products-section .product-category .product-items .product-item .product-text:hover {
+    color: #007474;
+}
+/* Promo Section Styles */
+.promo-section {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.products-section .mobile .mobile-items .mobile-item .mobile-text span {
-    font-weight: bold;
-    color: #4a6cf7;
+.promo-banner {
+    background: linear-gradient(135deg, #005858 0%, #008080 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 10px 20px rgba(0, 88, 88, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-banner::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    animation: shine 6s infinite linear;
+}
+
+@keyframes shine {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.promo-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.promo-banner p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+.promo-banner button {
+    background-color: white;
+    color: #005858;
+    border: none;
+    padding: 1rem 2.5rem;
     font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.promo-banner button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .promo-section {
+        padding: 2rem 1rem;
+    }
+    
+    .promo-banner {
+        padding: 2rem 1rem;
+    }
+    
+    .promo-banner h2 {
+        font-size: 1.8rem;
+    }
+    
+    .promo-banner p {
+        font-size: 1rem;
+    }
+    
+    .promo-banner button {
+        padding: 0.8rem 1.8rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .promo-banner h2 {
+        font-size: 1.5rem;
+    }
+    
+    .promo-banner p {
+        font-size: 0.9rem;
+    }
 }

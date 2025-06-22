@@ -1,6 +1,6 @@
 import './Header.css';
 import { NavLink } from 'react-router-dom';
-import { CiShoppingCart, CiUser,CiMenuBurger } from "react-icons/ci";
+import { CiShoppingCart, CiUser, CiMenuBurger } from "react-icons/ci";
 import { IoClose } from "react-icons/io5";
 import { useState } from 'react';
 
@@ -9,9 +9,9 @@ export default function Header() {
 
     return (
         <div className='header'>
-        
+
             <div className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
-                {menuOpen? <IoClose/> :<CiMenuBurger/>}
+                {menuOpen ? <IoClose /> : <CiMenuBurger />}
             </div>
 
             <h1>Phone-Store</h1>
@@ -24,11 +24,6 @@ export default function Header() {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/Services" onClick={() => setMenuOpen(false)}>
-                            Services
-                        </NavLink>
-                    </li>
-                    <li>
                         <NavLink to="/Products" onClick={() => setMenuOpen(false)}>
                             Products
                         </NavLink>
@@ -37,10 +32,12 @@ export default function Header() {
                         <NavLink to="/About Us" onClick={() => setMenuOpen(false)}>
                             About Us
                         </NavLink>
+                        <NavLink to="/About Us" onClick={() => setMenuOpen(false)}>
+                            Contact Us
+                        </NavLink>
                     </li>
                 </ul>
             </nav>
-
             <div className="icons">
                 <CiShoppingCart />
                 <CiUser />
