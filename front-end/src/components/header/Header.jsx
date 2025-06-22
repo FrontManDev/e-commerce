@@ -29,11 +29,13 @@ export default function Header() {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/About Us" onClick={() => setMenuOpen(false)}>
+                        <NavLink to="/Aboutus" onClick={() => setMenuOpen(false)}>
                             About Us
                         </NavLink>
-                        <NavLink to="/About Us" onClick={() => setMenuOpen(false)}>
-                            Contact Us
+                    </li>
+                    <li>
+                        <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
+                            Contact
                         </NavLink>
                     </li>
                 </ul>
