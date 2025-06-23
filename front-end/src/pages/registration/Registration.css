@@ -168,6 +168,34 @@
     cursor: pointer;
 }
 
+.Registration-page .SigneIn-form form .input-form .input-strong{
+    border: 1px solid green;
+}
+
+.Registration-page .SigneIn-form form .input-form .input-wake{
+    border: 1px solid #ff2b2b;
+}
+
+.Registration-page .SigneIn-form form .input-form .strong{
+    font-size: 0.8rem;
+    color: green;
+    margin-top: 5px;
+}
+
+.Registration-page .SigneIn-form form .input-form .wake{
+    font-size: 0.8rem;
+    color: #ff2b2b;
+    margin-top: 5px;
+}
+
+.Registration-page .SigneIn-form form .input-form .label-strong{
+    color: green
+}
+
+.Registration-page .SigneIn-form form .input-form .label-wake{
+    color: #ff2b2b;
+}
+
 @media (max-width: 768px) {
     .Registration-page .SigneIn-form {
         width: 95%;

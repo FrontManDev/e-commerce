@@ -1,7 +1,22 @@
-import { useState } from 'react';
 import './Registration.css';
+import { useEffect, useState } from 'react';
+
 export default function Registration() {
     const [IsLogin, SetIsLogin] = useState(true);
+    const [password, setPassword] = useState('');
+    const [Strong, SetStrong] = useState(false);
+    const PasswordExpresionReguliare = /^[a-zA-Z0-9]{8,}$/;
+
+    function PasswordStrong() {
+        if (PasswordExpresionReguliare.test(password)) {
+            SetStrong(true);
+        } else {
+            SetStrong(false);
+        }
+    }
+    useEffect(() => {
+        PasswordStrong();
+    }, [password]);
     return (
         <div className='Registration-page'>
             {
@@ -43,22 +58,35 @@ export default function Registration() {
                                 </div>
                                 <div className="left-right-form">
                                     <div className="input-form">
-                                        <label htmlFor="">Password</label>
-                                        <input type="password" />
-                                    </div>
-                                    <div className="input-form">
-                                        <label htmlFor="">Confrime Password</label>
-                                        <input type="Password" />
-                                    </div>
-                                </div>
-                                <div className="left-right-form">
-                                    <div className="input-form">
                                         <label htmlFor="">Email</label>
                                         <input type="email" />
                                     </div>
                                     <div className="input-form file-input">
                                         <input type="file" id='file' />
                                         <label htmlFor="file" className='file'>Profile Picture</label>
+                                    </div>
+                                </div>
+                                <div className="left-right-form">
+                                    <div className="input-form">
+                                        <label htmlFor="" className={Strong ? "label-strong" : "label-wake"}>Create Password</label>
+                                        <input type="password"
+                                            value={password}
+                                            onChange={(e) => setPassword(e.target.value)}
+                                            className={Strong ? "input-strong" : "input-wake"} />
+                                        {
+                                            Strong ?
+                                                <p className='strong'>
+                                                    password is strong
+                                                </p>
+                                                :
+                                                <p className='wake'>
+                                                    password is wake
+                                                </p>
+                                        }
+                                    </div>
+                                    <div className="input-form">
+                                        <label htmlFor="">Confrime Password</label>
+                                        <input type="Password" />
                                     </div>
                                 </div>
                                 <div className="sigin-buttons">
