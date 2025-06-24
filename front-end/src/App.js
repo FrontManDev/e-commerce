@@ -7,6 +7,8 @@ import Contact from './pages/contact/Contact';
 import Registration from './pages/registration/Registration';
 import Profile from './pages/profile/Profile';
 import Cart from './pages/cart/Cart';
+import NotFound from './pages/notfound/NotFound';
+import Product from './pages/product/Product';
 function App() {
   return (
     <div>
@@ -16,7 +18,9 @@ function App() {
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/registration" element={<Registration/>}/>
         <Route path="/profile" element={<Profile/>}/>
-        <Route path="/Cart" element={<Cart/>}/>
+        <Route path="/cart" element={<Cart/>}/>
+        <Route path="/Products" element={<Product/>}/>
+        <Route path="*" element={<NotFound/>}/>
       </Routes>
       <Footer/>
     </div>
