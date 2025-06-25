@@ -29,11 +29,6 @@ export default function Header() {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/Aboutus" onClick={() => setMenuOpen(false)}>
-                            About Us
-                        </NavLink>
-                    </li>
-                    <li>
                         <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
                             Contact
                         </NavLink>

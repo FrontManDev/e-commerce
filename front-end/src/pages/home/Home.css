@@ -86,11 +86,10 @@
 
 .products-section {
     height: auto;
-    padding: 2.5%;
 }
 
 .products-section .product-category {
-    padding: 0% 8%;
+    padding: 0% 2.5%;
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
@@ -119,12 +118,12 @@
 .products-section .product-category .product-items {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 20px;
     overflow-x: hidden;
 }
 
 .products-section .product-category .product-items .product-item {
-    width: 230px;
+    width: 275px;
     height: 450px;
     position: relative;
 }

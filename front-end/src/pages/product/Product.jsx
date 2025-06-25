@@ -5,7 +5,7 @@ import './Product.css';
 
 export default function Product() {
     const [products, setProducts] = useState([]);
-    
+
     useEffect(() => {
         setProducts([
             {
@@ -54,7 +54,7 @@ export default function Product() {
                                 <option value="accessories">Accessories</option>
                             </select>
                         </div>
-                        
+
                         <div className="filter-section">
                             <label htmlFor="price-sort">Sort by Price</label>
                             <select id="price-sort">
@@ -106,6 +106,7 @@ export default function Product() {
                             ))}
                         </div>
                     </section>
+                    
                 </main>
             </div>
         </div>

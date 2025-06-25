@@ -9,6 +9,7 @@ import Profile from './pages/profile/Profile';
 import Cart from './pages/cart/Cart';
 import NotFound from './pages/notfound/NotFound';
 import Product from './pages/product/Product';
+import ProductDetails from './pages/productdetails/ProductDetails';
 function App() {
   return (
     <div>
@@ -20,6 +21,7 @@ function App() {
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/Products" element={<Product/>}/>
+        <Route path='/ProductDetails' element={<ProductDetails/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Routes>
       <Footer/>
