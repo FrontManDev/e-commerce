@@ -11,7 +11,7 @@ export default function Sidebar() {
             </h1>
             <ul className="sidebar-list">
                 <li className="sidebar-item">
-                    <NavLink to="/" className="sidebar-link" activeClassName="active">
+                    <NavLink to="/dashboard" className="sidebar-link" activeClassName="active">
                         <FiHome className="sidebar-icon" />
                         <span>Dashboard</span>
                     </NavLink>
@@ -23,25 +23,25 @@ export default function Sidebar() {
                     </NavLink>
                 </li>
                 <li className="sidebar-item">
-                    <NavLink to="/orders" className="sidebar-link" activeClassName="active">
+                    <NavLink to="/adminorders" className="sidebar-link" activeClassName="active">
                         <FiShoppingBag className="sidebar-icon" />
                         <span>Orders</span>
                     </NavLink>
                 </li>
                 <li className="sidebar-item">
-                    <NavLink to="/products" className="sidebar-link" activeClassName="active">
+                    <NavLink to="/adminproducts" className="sidebar-link" activeClassName="active">
                         <FiPackage className="sidebar-icon" />
                         <span>Products</span>
                     </NavLink>
                 </li>
                 <li className="sidebar-item">
-                    <NavLink to="/category" className="sidebar-link" activeClassName="active">
+                    <NavLink to="/admincategory" className="sidebar-link" activeClassName="active">
                         <FiList className="sidebar-icon" />
                         <span>Category</span>
                     </NavLink>
                 </li>
                 <li className="sidebar-item">
-                    <NavLink to="/category" className="sidebar-link" activeClassName="active">
+                    <NavLink to="/" className="sidebar-link" activeClassName="active">
                         <FaStore className="sidebar-icon" />
                         <span>Store</span>
                     </NavLink>
