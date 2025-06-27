@@ -5,8 +5,8 @@ import UserLayout from './layouts/UserLayout';
 import AdminLayout from './layouts/AdminLayout';
 
 import NotFound from './store/pages/notfound/NotFound';
-import UserRoutes from './userroutes/UserRoutes';
 import AdminRoutes from './adminroutes/AdminRoutes';
+import UserRoutes from './userroutes/UserRoutes';
 function App() {
   return (
     <Routes>

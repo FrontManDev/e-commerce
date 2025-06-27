@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { FiHome, FiUsers, FiShoppingBag, FiPackage, FiList, FiLogOut } from 'react-icons/fi';
+import { IoIosNotifications } from "react-icons/io";
 import { FaStore } from "react-icons/fa6";
 import './SideBar.css';
 
@@ -38,6 +39,12 @@ export default function Sidebar() {
                     <NavLink to="/admincategory" className="sidebar-link" activeClassName="active">
                         <FiList className="sidebar-icon" />
                         <span>Category</span>
+                    </NavLink>
+                </li>
+                <li className="sidebar-item">
+                    <NavLink to="/users" className="sidebar-link" activeClassName="active">
+                        <IoIosNotifications className="sidebar-icon" />
+                        <span>Notifications</span>
                     </NavLink>
                 </li>
                 <li className="sidebar-item">

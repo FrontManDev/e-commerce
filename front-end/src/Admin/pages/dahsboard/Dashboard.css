@@ -4,6 +4,54 @@
     box-sizing: border-box;
     font-family: "Jost", sans-serif;
 }
-.dashboard-container{
-    width: 80%;
+
+.dashboard-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.dashboard-container h1 {
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.chartJs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.chartJs div {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.chartJs div:hover {
+    transform: translateY(-5px);
+}
+
+/* تنسيقات للرسومات البيانية */
+.number-of-visitore, .salse, .orders {
+    grid-column: span 1;
+}
+
+.status-of-users, .salse-category {
+    grid-column: span 1;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    .chartJs {
+        grid-template-columns: 1fr;
+    }
+    
+    .chartJs div {
+        width: 100%;
+    }
 }
