@@ -1,7 +1,8 @@
 export default function Orders() {
     return (
-        <div>
+        <div className="orders-container">
             <h1>Orders</h1>
+            
         </div>
     )
 }
