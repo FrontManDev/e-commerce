@@ -1,5 +1,6 @@
 import { Chart as ChartJs, LineElement, ArcElement, CategoryScale, LinearScale, PointElement, Tooltip, BarElement, Legend } from 'chart.js';
 ChartJs.register(LineElement, CategoryScale, ArcElement, BarElement, LinearScale, PointElement, Tooltip, Legend);
+
 export const Visitures = {
     labels: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
     datasets: [
@@ -14,18 +15,35 @@ export const Visitures = {
         }
     ]
 }
-export const ActiveUsers = {
-    labels: ['Online', 'Offline'],
-    datasets: [
-        {
-            label: 'User Status',
-            data: [15, 1],
-            backgroundColor: ['#36A2EB', '#FF6384'],
-            borderColor: ['#fff', '#fff'],
-            borderWidth: 2,
-        },
-    ],
+
+export const visituresOptions = {
+  responsive: true,
+  plugins: {
+    legend: {
+      display: true,
+      position: 'top'
+    },
+    tooltip: {
+      enabled: true
+    }
+  },
+  scales: {
+    x: {
+      title: {
+        display: true,
+        text: 'Days of the Week'
+      }
+    },
+    y: {
+      beginAtZero: true,
+      title: {
+        display: true,
+        text: 'Number of Visitors'
+      }
+    }
+  }
 };
+
 export const MonthSales = {
     labels: [
         'January', 'February', 'March', 'April',
@@ -40,6 +58,34 @@ export const MonthSales = {
             borderRadius: 5,
         },
     ],
+};
+
+export const monthSalesOptions = {
+  responsive: true,
+  plugins: {
+    legend: {
+      display: true,
+      position: 'top'
+    },
+    tooltip: {
+      enabled: true
+    }
+  },
+  scales: {
+    x: {
+      title: {
+        display: true,
+        text: 'Months'
+      }
+    },
+    y: {
+      beginAtZero: true,
+      title: {
+        display: true,
+        text: 'Sales Count'
+      }
+    }
+  }
 };
 
 export const CategorySales = {
@@ -60,6 +106,34 @@ export const CategorySales = {
     ],
 };
 
+export const categorySalesOptions = {
+  responsive: true,
+  plugins: {
+    legend: {
+      display: true,
+      position: 'top'
+    },
+    tooltip: {
+      enabled: true
+    }
+  },
+  scales: {
+    x: {
+      title: {
+        display: true,
+        text: 'Categories'
+      }
+    },
+    y: {
+      beginAtZero: true,
+      title: {
+        display: true,
+        text: 'Sales Count'
+      }
+    }
+  }
+};
+
 export const Orders = {
     labels: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
     datasets: [
@@ -77,3 +151,31 @@ export const Orders = {
         }
     ]
 }
+
+export const ordersOptions = {
+  responsive: true,
+  plugins: {
+    legend: {
+      display: true,
+      position: 'top'
+    },
+    tooltip: {
+      enabled: true
+    }
+  },
+  scales: {
+    x: {
+      title: {
+        display: true,
+        text: 'Days of the Week'
+      }
+    },
+    y: {
+      beginAtZero: true,
+      title: {
+        display: true,
+        text: 'Orders Count'
+      }
+    }
+  }
+};
