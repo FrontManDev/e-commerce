@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+}
+
+.orders-container {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 85%;
+}
+
+.orders-container .orders-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.orders-container .orders-heading .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.orders-container .orders-heading .buttons button {
+    width: 100px;
+    padding: 5px;
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 7px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.orders-container .orders-heading .buttons button:nth-child(2) {
+    background-color: #ff440080;
+    color: orangered;
+    border: 1px solid orangered;
+}
+
+.orders-container .orders-heading .buttons button:nth-child(3) {
+    background-color: #ffa60080;
+    color: orange;
+    border: 1px solid orange;
+}
+
+.orders-container .orders-heading .buttons button:nth-child(4) {
+    background-color: #00800080;
+    color: green;
+    border: 1px solid green;
+}
+
+.orders-container .orders-heading .buttons button:nth-child(5) {
+    background-color: pink;
+    color: red;
+    border: 1px solid red;
+}
+
+.orders-container .orders-heading .buttons .active {
+    opacity: 1;
+}
+
+.orders-container table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    color: #000000cc;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.orders-container table thead th {
+    background-color: #cacaca;
+    padding: 15px;
+}
+
+.orders-container table tbody td {
+    padding: 15px;
+}
+
+.orders-container table tbody tr td button {
+    width: 100px;
+    padding: 10px;
+    color: white;
+    background-color: green;
+    border-radius: 8px;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.orders-container table tbody tr td button:hover {
+    background-color: #008000af;
+}
+
+.orders-container table tbody tr {
+    border: 1px solid black;
+}
+
+.orders-container table tr {
+    border: 1px solid black;
+    transform: 0.3s;
+    cursor: pointer;
+}
+
+.orders-container table tbody tr:hover{
+    transform: scale(1.01);
+    border: none;
+}
+
+.processing {
+    color: orangered;
+}
+
+.shipping {
+    color: orange;
+}
+
+.cancelled {
+    color: red;
+}
+
+.delivered{
+    color: green;
+}
+
+.orders-container .pagination{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.orders-container .pagination button{
+    height: 40px;
+    width: 40px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.orders-container .pagination .active{
+    background-color: black;
+    color: white;   
+}
