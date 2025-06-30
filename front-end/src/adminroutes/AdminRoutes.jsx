@@ -3,7 +3,8 @@ import { Route } from 'react-router-dom';
 import Orders from '../admin/pages/order/Orders';
 import Users from '../admin/pages/users/Users';
 import Products from '../admin/pages/poducts/Products';
-import Category from '../admin/pages/category/Category'
+import Category from '../admin/pages/category/Category';
+import Notifications from '../admin/pages/notifications/Notifications';
 export default function AdminRoutes() {
     return (
         <>
@@ -12,6 +13,7 @@ export default function AdminRoutes() {
             <Route path='/users' element={<Users />} />
             <Route path='/adminproducts' element={<Products />} />
             <Route path='/admincategory' element={<Category />} />
+            <Route path='/notifications' element={<Notifications/>}/>
         </>
     )
 }
