@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+}
+
+.add-products-container {
+    position: absolute;
+    width: 85%;
+    left: 15%;
+    padding: 20px;
+}
+
+.add-products-container .add-products-heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-products-container .add-products-heading button {
+    width: 100px;
+    border-radius: 7px;
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.add-products-container .add-products-heading button a {
+    text-decoration: none;
+    color: white;
+}
+
+.add-products-container .add-products {
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.add-products-container .add-products form {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.add-products-container .add-products form .left-right {
+    display: flex;
+    gap: 20px;
+}
+
+.add-products-container .add-products form .left-right .left {
+    width: 50%;
+}
+
+.add-products-container .add-products form .left-right .right {
+    width: 50%;
+}
+
+.add-products-container .add-products .left-right .left select {
+    width: 550px;
+    height: 50px;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+.add-products-container .add-products form .left-right .right input[type='file'] {
+    display: none;
+}
+
+.add-products-container .add-products form .left-right .right input[type='file']+label {
+    width: 550px;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 2px dashed grey;
+    background-color: rgba(128, 128, 128, 0.5);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.add-products-container .add-products form button {
+    width: 35%;
+    font-size: 1.5rem;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    * {
+        font-size: 1rem;
+    }
+
+    .add-products-container .add-products form .left-right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .add-products-container .add-products form .left-right .left {
+        width: 100%;
+    }
+
+    .add-products-container .add-products form .left-right .right {
+        width: 100%;
+    }
+
+    .add-products-container .add-products form .left-right .right input[type='file']+label {
+        width: 100%;
+    }
+
+    .add-products-container .add-products .left-right .left select {
+        width: 100%;
+    }
+    
+    .add-products-container .add-products form button{
+        width: 100%;
+    }
+}

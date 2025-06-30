@@ -39,6 +39,11 @@
     cursor: pointer;
 }
 
+.products-container .products-heading button a{
+    color: white;
+    text-decoration: none;
+}
+
 .products-container form {
     margin-bottom: 20px;
 }
@@ -147,3 +152,4 @@
 .products-container table tbody tr td button:active{
     opacity: 1;
 }
+

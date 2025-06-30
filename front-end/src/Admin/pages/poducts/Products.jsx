@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './Products.css';
 import { IoAdd } from "react-icons/io5";
-
+import {NavLink} from 'react-router-dom';
 export default function Products() {
     const allProducts = [
         {
@@ -101,7 +101,7 @@ export default function Products() {
         <div className='products-container'>
             <div className="products-heading">
                 <h1>Products</h1>
-                <button><IoAdd />Add New</button>
+                <button><IoAdd /><NavLink to='/AddProducts'>Add New</NavLink></button>
             </div>
             <form>
                 <select>
