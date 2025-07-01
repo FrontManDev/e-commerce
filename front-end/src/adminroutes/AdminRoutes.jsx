@@ -6,6 +6,7 @@ import Products from '../admin/pages/poducts/Products';
 import Category from '../admin/pages/category/Category';
 import Notifications from '../admin/pages/notifications/Notifications';
 import AddProducts from '../admin/pages/addproducts/AddProducts';
+import NewCategory from '../admin/pages/newcategory/NewCategory';
 export default function AdminRoutes() {
     return (
         <>
@@ -16,6 +17,7 @@ export default function AdminRoutes() {
             <Route path='/admincategory' element={<Category />} />
             <Route path='/notifications' element={<Notifications/>}/>
             <Route path='/AddProducts' element={<AddProducts/>}/>
+            <Route path='/NewCategory' element={<NewCategory/>}/>
         </>
     )
 }

@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+}
+
+.newcategory-container{
+    position: absolute;
+    left: 15%;
+    width: 85%;
+    padding: 20px;
+}
+
+.newcategory-container .new-category-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newcategory-container .new-category-heading button{
+    width: 100px;
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    border-radius: 8px;
+    border: none;
+    padding: 5px;
+}
+
+.newcategory-container .new-category-heading button a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.newcategory-container .add-category{
+    margin: 75px auto;
+    width: 100%;
+}
+
+.newcategory-container .add-category button{
+    width: 30%;
+    background: black;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.1rem;
+    padding: 10px;
+}

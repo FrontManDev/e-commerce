@@ -1,6 +1,7 @@
 import './Category.css';
 import { IoAdd } from "react-icons/io5";
 import { useState, useEffect } from 'react';
+import {NavLink} from 'react-router-dom';
 export default function Category() {
 
     const category = [
@@ -56,7 +57,7 @@ export default function Category() {
         <div className="category-contiaer">
             <div className="category-heading">
                 <h1>Category</h1>
-                <button><IoAdd />New Category</button>
+                <button><IoAdd /><NavLink to='/NewCategory'>New Category</NavLink></button>
             </div>
             <table>
                 <thead>
