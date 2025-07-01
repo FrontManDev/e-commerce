@@ -1,0 +1,80 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  ADMIN
+  USER
+}
+
+model Users {
+  id            String          @id @default(uuid())
+  FirstName     String
+  LastName      String
+  Email         String          @unique
+  Address       String
+  Password      String
+  Image         String
+  Role          UserRole
+  Notifications Notifications[]
+  Orders        Orders[]
+}
+
+model Orders {
+  id         String      @id @default(uuid())
+  user       Users       @relation(fields: [UserId], references: [id])
+  UserId     String
+  CreateAt   DateTime    @default(now())
+  DeliverAt  DateTime
+  orderItems OrderItem[]
+}
+
+model OrderItem {
+  id       String @id @default(uuid())
+  orders   Orders @relation(fields: [OrdersId], references: [id])
+  OrdersId String
+}
+
+model Products {
+  id          String   @id @default(uuid())
+  Name        String
+  Price       Float
+  Description String
+  Category    Category @relation(fields: [CategoryId], references: [id])
+  CategoryId  String
+  Images      Images   @relation(fields: [ImageId], references: [id])
+  ImageId     String
+  CreateAt    DateTime @default(now())
+  UpdateAt    DateTime @updatedAt
+}
+
+model Category {
+  id          String     @id @default(uuid())
+  Name        String
+  Description String
+  Products    Products[]
+  CreateAt    DateTime   @default(now())
+  UpdateAt    DateTime   @updatedAt
+}
+
+model Images {
+  id       String     @id @default(uuid())
+  src      String
+  Products Products[]
+}
+
+model Notifications {
+  id        String   @id @default(uuid())
+  Full_Name String
+  Email     String   @unique
+  Message   String
+  User      Users    @relation(fields: [UserId], references: [id])
+  UserId    String
+  CreateAt  DateTime @default(now())
+}
