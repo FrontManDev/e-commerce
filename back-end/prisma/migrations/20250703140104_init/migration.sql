@@ -1,6 +1,9 @@
 -- CreateEnum
 CREATE TYPE "UserRole" AS ENUM ('ADMIN', 'USER');
 
+-- CreateEnum
+CREATE TYPE "UserStatus" AS ENUM ('ONLINE', 'OFFLINE', 'BLOCK');
+
 -- CreateTable
 CREATE TABLE "Users" (
     "id" TEXT NOT NULL,
@@ -10,7 +13,8 @@ CREATE TABLE "Users" (
     "Address" TEXT NOT NULL,
     "Password" TEXT NOT NULL,
     "Image" TEXT NOT NULL,
-    "Role" "UserRole" NOT NULL,
+    "Role" "UserRole" NOT NULL DEFAULT 'USER',
+    "Status" "UserStatus" NOT NULL,
 
     CONSTRAINT "Users_pkey" PRIMARY KEY ("id")
 );

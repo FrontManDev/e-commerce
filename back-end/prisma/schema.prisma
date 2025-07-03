@@ -1,6 +1,5 @@
 generator client {
   provider = "prisma-client-js"
-  output   = "../generated/prisma"
 }
 
 datasource db {
@@ -13,6 +12,12 @@ enum UserRole {
   USER
 }
 
+enum UserStatus {
+  ONLINE
+  OFFLINE
+  BLOCK
+}
+
 model Users {
   id            String          @id @default(uuid())
   FirstName     String
@@ -21,7 +26,8 @@ model Users {
   Address       String
   Password      String
   Image         String
-  Role          UserRole
+  Role          UserRole        @default(USER)
+  Status        UserStatus
   Notifications Notifications[]
   Orders        Orders[]
 }
